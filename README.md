@@ -1,4 +1,4 @@
-# medifinder
+# MediTrack
 
 A new Flutter project.
 
