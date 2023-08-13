@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              child: Opacity(opacity: 0.5,
+              child: Opacity(opacity: 0.4,
               child: Image.asset('assets/loginbg.png',fit: BoxFit.cover,))
             ),
             Padding(
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: ElevatedButton.styleFrom(
                     splashFactory: NoSplash.splashFactory,
                     backgroundColor: const Color.fromARGB(85, 1, 128, 122),
-                    minimumSize: const Size(200, 55),
+                    minimumSize: const Size(200, 56),
                     disabledBackgroundColor: Colors.transparent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -103,8 +103,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                   label: isLoading
                       ? const SizedBox(
-                          width: 30,
-                          height: 30,
+                          width: 32,
+                          height: 32,
                           child: CircularProgressIndicator(
                             color: Colors.white,
                             strokeWidth: 3,
