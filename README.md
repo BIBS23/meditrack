@@ -5,11 +5,11 @@ We have made this project during a hackathon conducted by mulearn. In one day it
 # About MediTrack
 
 • Meditrack, a user-friendly mobile app for finding nearby hospitals based on
-userlocation.
+userlocation.\
 • Maps and location services to facilitate easy navigation to selected
-hospitals.
+hospitals.\
 • Enhanced search functionality for filtering hospitals by specialty (e.g.,
-oncologist).
+oncologist).\
 • Included userreviews forinformed decision-making.
 
 ![image](https://github.com/BIBS23/meditrack/assets/83808936/409f4420-0cfc-4d45-abca-269fff6689e3)
