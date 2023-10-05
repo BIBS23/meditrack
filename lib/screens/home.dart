@@ -3,6 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geolocator/geolocator.dart';
 import 'dart:math' as Math;
 
+import 'package:medifinder/screens/view_hospital.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});
 
@@ -209,45 +211,54 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        child: Row(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                documentSnapshot['hspimg'],
-                                width: 130,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      documentSnapshot['hspname'],
-                                      textAlign: TextAlign.justify,
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text(
-                                      documentSnapshot['speciality'],
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text(
-                                      documentSnapshot['address'],
-                                      textAlign: TextAlign.justify,
-                                      maxLines: 3,
-                                    ),
-                                  ],
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ViewHospitalScreen(hspimg: documentSnapshot['hspimg'],hspname: documentSnapshot['hspname'],phone: documentSnapshot['phone'],hspdetails: documentSnapshot['description'],address: documentSnapshot['address'],)));
+                        },
+                        child: Card(
+                          child: Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                  documentSnapshot['hspimg'],
+                                  width: 130,
+                                  height: 100,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            )
-                          ],
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        documentSnapshot['hspname'],
+                                        textAlign: TextAlign.justify,
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        documentSnapshot['speciality'],
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        documentSnapshot['address'],
+                                        textAlign: TextAlign.justify,
+                                        maxLines: 3,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     );
