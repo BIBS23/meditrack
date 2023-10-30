@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1036699777073',
     projectId: 'meditrack-fa303',
     storageBucket: 'meditrack-fa303.appspot.com',
+    androidClientId: '1036699777073-45auua19p0eln22mqf2e33pu9a829uc5.apps.googleusercontent.com',
     iosClientId: '1036699777073-7pi51jkl4bn13mq45ttgfkf3brjln23n.apps.googleusercontent.com',
     iosBundleId: 'com.example.medifinder',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1036699777073',
     projectId: 'meditrack-fa303',
     storageBucket: 'meditrack-fa303.appspot.com',
+    androidClientId: '1036699777073-45auua19p0eln22mqf2e33pu9a829uc5.apps.googleusercontent.com',
     iosClientId: '1036699777073-oo4mk5li1m95bf2shabvok4evbickcid.apps.googleusercontent.com',
     iosBundleId: 'com.example.medifinder.RunnerTests',
   );

@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ViewHospitalScreen(hspimg: documentSnapshot['hspimg'],hspname: documentSnapshot['hspname'],phone: documentSnapshot['phone'],hspdetails: documentSnapshot['description'],address: documentSnapshot['address'],)));
+                                  builder: (context) => ViewHospitalScreen(latitude: double.parse(documentSnapshot['latitude']),longitude: double.parse( documentSnapshot['longitude'])  ,   hspimg: documentSnapshot['hspimg'],hspname: documentSnapshot['hspname'],phone: documentSnapshot['phone'],hspdetails: documentSnapshot['description'],address: documentSnapshot['address'],)));
                         },
                         child: Card(
                           child: Row(
